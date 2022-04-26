@@ -14,3 +14,10 @@ function listarTodosOsFilmes(filmes){
     }
 };
 listarTodosOsFilmes(catalogoObj.data)
+
+// function listarFilmesEmCartaz(filmes){
+//     for(let i = 0; i < filmes.length; i++){
+//         console.log(filmes[i].emCartaz);
+//     }
+// };
+// listarFilmesEmCartaz(catalogoObj.data)
