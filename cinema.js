@@ -8,12 +8,16 @@ var catalogoString = JSON.stringify(catalogo);
 var catalogoObj = JSON.parse(catalogoString);
 // console.log(catalogoObj);
 
+
+//FUNÇÃO LISTAR TODOS OS FILMES
 function listarTodosOsFilmes(filmes){
     for(let i = 0; i < filmes.length; i++){
         console.log(filmes[i].titulo);
     }
 };
 listarTodosOsFilmes(catalogoObj.data)
+
+//FUNÇÃO LISTAR FILMES EM CARTAZ - FUNÇÃO ORIGINAL A QUE FOI CRIDA ANTES DE REFATORAR
 
 // function listarFilmesEmCartaz(filmes) {
 //     const filmesEmCartaz = filmes.filter((filmes) => {
@@ -28,11 +32,16 @@ listarTodosOsFilmes(catalogoObj.data)
 // const listarFilmesEmCartaz = (filmes) =>
 //   filmes.filter((filme) => filme.emCartaz);
 
+
+//FUNÇÃO REFFATORADA LISTAR FILMES EM CARTAZ
+
 function listarFilmesEmCartaz(filmes) {
     return filmes.filter((filme) => filme.emCartaz);
   }
   console.log(listarFilmesEmCartaz(catalogoObj.data));
   
+
+//FUNÇÃO ALTERAR STATUS EM CARTAZ - CODIGO ORIGINAL
 
 //   function alterarStatusEmCartaz(id, filmes) {
 //     const idxFilme = filmes.findIndex((filme) => {
@@ -48,6 +57,8 @@ function listarFilmesEmCartaz(filmes) {
 //   console.log(alterarStatusEmCartaz(1, catalogoObj.data));
 //   console.log(catalogoObj.data);
   
+
+//FUNÇÃO ALTERAR STATUS EM CARTAZ - SEGUNDA OPÇÃO
 
 function alterarStatusEmCartaz(id, filmes) {
     const idxFilme = filmes.findIndex((filme) => {
@@ -66,5 +77,5 @@ function alterarStatusEmCartaz(id, filmes) {
   console.log(alterarStatusEmCartaz(1, catalogoObj.data));
   console.log(catalogoObj.data);
   
-  
+
   
