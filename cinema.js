@@ -8,16 +8,20 @@ var catalogoString = JSON.stringify(catalogo);
 var catalogoObj = JSON.parse(catalogoString);
 // console.log(catalogoObj);
 
-function listarTodosOsFilmes(filmes){
-    for(let i = 0; i < filmes.length; i++){
-        console.log(filmes[i].titulo);
-    }
-};
-listarTodosOsFilmes(catalogoObj.data)
-
-// function listarFilmesEmCartaz(filmes){
+// function listarTodosOsFilmes(filmes){
 //     for(let i = 0; i < filmes.length; i++){
-//         console.log(filmes[i].emCartaz);
+//         console.log(filmes[i].titulo);
 //     }
 // };
-// listarFilmesEmCartaz(catalogoObj.data)
+// listarTodosOsFilmes(catalogoObj.data)
+
+function listarFilmesEmCartaz(filmes) {
+    const filmesEmCartaz = filmes.filter((filmes) => {
+      if (filmes.emCartaz === true) {
+        return true;
+      }
+    });
+    return filmesEmCartaz;
+  }
+  console.log(listarFilmesEmCartaz(catalogoObj.data));
+  
